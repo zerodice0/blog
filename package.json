@@ -1,0 +1,10 @@
+{
+  "name": "blabkbear_blog",
+  "version": "1.0.0",
+  "description": "BlackBear's blog",
+  "main": "index.js",
+  "repository": "https://github.com/zerodice0/blog.git",
+  "author": "zerodice0",
+  "license": "MIT",
+  "private": false
+}
