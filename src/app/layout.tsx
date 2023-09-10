@@ -1,12 +1,17 @@
 import { PropsWithChildren } from "react";
 import Navigation from "../components/navigation/navigation";
 
+import "./layout.css";
+
 const RootLayout = ({children}: PropsWithChildren) => {
   return (
-    <>
-      <Navigation/>
-      {children}
-    </>
+    <html>
+      <head></head>
+      <body>
+        <Navigation/>
+        {children}
+      </body>
+    </html>
   )
 }
 

@@ -1,15 +1,20 @@
-import { Home, User } from "react-feather"
-
+import { Home, User, Menu } from "react-feather";
 import "./navigation.css";
 
 const Navigation = () => {
   return (
-    <nav className="navigation">
-      <div>
-        <a href="/"><Home/>BlackBear's Archive</a>
+    <nav>
+      <div className="home">
+        <a className="navigation-link" href="/">
+          <Home/>BlackBear's Archive
+        </a>
       </div>
-      <div>
-        <a href="/profile"><User/>Profile</a>
+      <div className="search">
+        <input/>
+        <button>Search</button>
+      </div>
+      <div className="menu">
+        <Menu/>
       </div>
     </nav>
   );

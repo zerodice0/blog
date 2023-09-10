@@ -1,34 +1,40 @@
-.navigation {
+nav {
   display: flex;
-  flex-direction: row;
+  align-content: center;
   background-color: black;
+  height: 5rem;
+}
+
+.home, .search, .menu {
+  padding: 1rem;
+  flex: none;
+  align-self: center;
   color: white;
-  
-  height: 4rem;
-  margin: 0;
-  padding: 0;
 }
 
-.navigation div {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  margin-right: 1rem;
+.search input {
+  width: 15rem;
+  border: 0;
+  border-radius: 0.3rem 0 0 0.3rem;
 }
 
-.navigation div a {
-  display: flex;
-  align-items: center;
-  color: inherit;
+.search button {
+  color: black;
+  border: 0;
+  border-radius: 0 0.3rem 0.3rem 0;
+}
+
+.menu {
+  margin-left: auto;
+}
+
+.navigation-link {
+  color: white;
   text-decoration: none;
+  display:flex;
+  align-items: center;
 }
 
-.navigation div svg {
-  margin-right: 0.2rem;
-}
-
-.navigation div svg {
-  margin-left: 1rem;
+.navigation-link svg {
+  margin-right: 0.3rem;
 }
