@@ -1,7 +1,7 @@
 nav {
   display: flex;
   align-content: center;
-  background-color: black;
+  background-color: #283044;
   height: 5rem;
 }
 
@@ -9,7 +9,7 @@ nav {
   padding: 1rem;
   flex: none;
   align-self: center;
-  color: white;
+  color: #ebf5ee;
 }
 
 .search input {
@@ -19,7 +19,8 @@ nav {
 }
 
 .search button {
-  color: black;
+  color: #ebf5ee;
+  background-color: #78a1bb;
   border: 0;
   border-radius: 0 0.3rem 0.3rem 0;
 }
@@ -29,7 +30,7 @@ nav {
 }
 
 .navigation-link {
-  color: white;
+  color: #ebf5ee;
   text-decoration: none;
   display:flex;
   align-items: center;
