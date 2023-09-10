@@ -1,0 +1,19 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.aside {
+  display: flex;
+  flex: none;
+  width: 20rem;
+  background-color: #bfa89e;
+}
+
+.main {
+  display: flex;
+  flex: 1; /*flex-grow: 1, flex-shrink: 1, flex-basis: 0*/
+  overflow: auto;
+  background-color: #8b786d
+}

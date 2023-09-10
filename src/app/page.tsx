@@ -1,6 +1,15 @@
+import "./page.css";
+
 const Page = () => {
   return (
-    <>Your content here</>
+    <div className="content">
+      <div className="aside">
+
+      </div>
+      <div className="main">
+ 
+      </div>
+    </div>
   );
 }
 
