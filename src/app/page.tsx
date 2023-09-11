@@ -1,16 +1,16 @@
-import "./page.css";
+import React from 'react'
+import './page.css'
 
-const Page = () => {
+const Page = (): JSX.Element => {
   return (
-    <div className="content">
-      <div className="aside">
+    <div className='content'>
+      <div className='aside'>
 
       </div>
-      <div className="main">
- 
+      <div className='main'>
       </div>
     </div>
-  );
+  )
 }
 
-export default Page;
+export default Page
