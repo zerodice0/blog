@@ -1,12 +1,10 @@
-import { fetchMdx } from '../api/fetch_mdx';
 import React from 'react'
+import { cacheFetchMdx } from '../api/fetch_mdx'
 
 import './page.css'
 
-
-
-const Page = async (): JSX.Element => {
-  console.log(await fetchMdx('./src/public/notices'));
+const Page = async (): Promise<JSX.Element> => {
+  console.log(await cacheFetchMdx('./src/public/notices'))
 
   return (
     <div className='content'>
