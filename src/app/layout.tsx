@@ -1,19 +1,21 @@
-import React from 'react'
-import type { PropsWithChildren } from 'react'
-import Navigation from '../components/navigation/navigation'
-
-import './layout.css'
+import React from "react";
+import type { PropsWithChildren } from "react";
+import Navigation from "../components/navigation/navigation";
+import "./layout.css";
+import { AuthProvider } from "../context/authProvider";
 
 const RootLayout = ({ children }: PropsWithChildren): JSX.Element => {
   return (
     <html>
-      <head></head>
+      <head>{"BlackBear's Archive"}</head>
       <body>
-        <Navigation/>
-        { children }
+        <AuthProvider>
+          <Navigation />
+          {children}
+        </AuthProvider>
       </body>
     </html>
-  )
-}
+  );
+};
 
-export default RootLayout
+export default RootLayout;

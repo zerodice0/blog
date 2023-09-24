@@ -1,24 +1,20 @@
-import React from 'react'
-import { MDXRemote } from 'next-mdx-remote/rsc'
-import { cacheFetchMdx } from '../api/fetch_mdx'
+import React from "react";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { cacheFetchMdx } from "../api/fetch_mdx";
 
-import './page.css'
+import "./page.css";
 
 const Page = async (): Promise<JSX.Element> => {
-  const noticeList = await cacheFetchMdx('./src/app/blog/markdown/notice')
-  const notice = noticeList.shift()
-  const markdown = notice?.body
+  const noticeList = await cacheFetchMdx("./src/app/blog/markdown/notice");
+  const notice = noticeList.shift();
+  const markdown = notice?.body;
 
   return (
-    <div className='content'>
-      <div className='aside'>
-
-      </div>
-      <div className='main'>
-        { <MDXRemote source={markdown ?? ''}/> }
-      </div>
+    <div className="content">
+      <div className="aside"></div>
+      <div className="main">{<MDXRemote source={markdown ?? ""} />} </div>
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
