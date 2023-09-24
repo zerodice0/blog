@@ -1,16 +1,21 @@
-import * as firebaseAdmin from "firebase-admin";
+import * as admin from "firebase-admin";
 
-const firebaseAdminConfig = {
-  privateKey: process.env.FIREBASE_PRIVATE_KEY,
-  clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-  projectId: process.env.FIREBASE_PROJECT_ID,
+const getFirebaseAdmin = async () => {
+  const firebaseAdminConfig = {
+    privateKey: process.env.FIREBASE_PRIVATE_KEY,
+    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+  };
+
+  if (admin.apps.length === 0) {
+    console.log("initializeApp!");
+
+    admin.initializeApp({
+      credential: admin.credential.cert(firebaseAdminConfig),
+    });
+  }
+
+  return admin;
 };
 
-if (firebaseAdmin.apps.length === 0) {
-  firebaseAdmin.initializeApp({
-    credential: firebaseAdmin.credential.cert(firebaseAdminConfig),
-    databaseURL: `https://${process.env.FIREBASE_PROJECT_ID}.firebaseio.com`,
-  });
-}
-
-export { firebaseAdmin };
+export default getFirebaseAdmin;
