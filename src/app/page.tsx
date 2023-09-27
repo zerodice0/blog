@@ -1,8 +1,7 @@
 import React from "react";
+import RecentPosts from "../components/recentPosts/recentPosts";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { cacheFetchMdx } from "../api/fetch_mdx";
-import { firestore } from "../api/firebase/firebaseClient";
-import { collection, getDocs } from "firebase/firestore/lite";
 
 import "./page.css";
 
@@ -11,14 +10,11 @@ const Page = async (): Promise<JSX.Element> => {
   const notice = noticeList.shift();
   const markdown = notice?.body;
 
-  const postsCol = collection(firestore, "posts");
-  const postsSnapshot = await getDocs(postsCol);
-
-  console.log(postsSnapshot.docs.map((post) => post.data()));
-
   return (
     <div className="content">
-      <div className="aside"></div>
+      <div className="aside">
+        <RecentPosts></RecentPosts>
+      </div>
       <div className="main">{<MDXRemote source={markdown ?? ""} />} </div>
     </div>
   );
