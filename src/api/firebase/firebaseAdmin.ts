@@ -10,7 +10,7 @@ const getFirebaseAdmin = async () => {
   if (admin.apps.length === 0) {
     console.log("initializeApp!");
 
-    admin.initializeApp({
+    await admin.initializeApp({
       credential: admin.credential.cert(firebaseAdminConfig),
     });
   }
